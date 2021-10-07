@@ -25,8 +25,11 @@ public class Test {
         if (getColor(x, y) == state) {
             return State.OK;
         } else {
+            System.out.println(State.ERROR);
+            System.exit(1);
             return State.ERROR;
         }
+
     }
 
 }
