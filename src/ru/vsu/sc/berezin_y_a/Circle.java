@@ -13,7 +13,7 @@ public class Circle {
     }
 
     public boolean isPointInCircle(double x, double y) {
-        return Math.pow((x - x0), 2) + Math.pow((y - y0), 2) <= Math.pow(r, 2);
+        return Math.pow((x - x0), 2) + Math.pow((y - y0), 2) < Math.pow(r, 2);
     }
 
 }
