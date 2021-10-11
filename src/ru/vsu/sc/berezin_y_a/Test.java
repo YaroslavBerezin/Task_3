@@ -1,7 +1,7 @@
 package ru.vsu.sc.berezin_y_a;
 
 import static ru.vsu.sc.berezin_y_a.Picture.getColor;
-import static ru.vsu.sc.berezin_y_a.Picture.printColorForPoint;
+import static ru.vsu.sc.berezin_y_a.Main.printColorForPoint;
 
 public class Test {
 

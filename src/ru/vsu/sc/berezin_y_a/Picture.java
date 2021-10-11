@@ -52,9 +52,4 @@ public class Picture {
         }
     }
 
-    public static void printColorForPoint(double x, double y) {
-        System.out.printf("(%.2f, %.2f) -> ", x, y);
-        System.out.println(getColor(x, y));
-    }
-
 }

@@ -2,8 +2,8 @@ package ru.vsu.sc.berezin_y_a;
 
 import java.util.Locale;
 import java.util.Scanner;
-import static ru.vsu.sc.berezin_y_a.Picture.printColorForPoint;
 import static ru.vsu.sc.berezin_y_a.Test.mainTest;
+import static ru.vsu.sc.berezin_y_a.Picture.getColor;
 
 public class Main {
 
@@ -19,6 +19,11 @@ public class Main {
 
         printColorForPoint(x, y);
 
+    }
+
+    public static void printColorForPoint(double x, double y) {
+        System.out.printf("(%.2f, %.2f) -> ", x, y);
+        System.out.println(getColor(x, y));
     }
 
     private static double readNum(String text) {
