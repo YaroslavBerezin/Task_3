@@ -2,8 +2,6 @@ package ru.vsu.sc.berezin_y_a;
 
 import java.util.Locale;
 import java.util.Scanner;
-import static ru.vsu.sc.berezin_y_a.Test.mainTest;
-import static ru.vsu.sc.berezin_y_a.Picture.getColor;
 
 public class Main {
 
@@ -11,7 +9,13 @@ public class Main {
 
         Locale.setDefault(Locale.ROOT);
 
-        mainTest();
+        if (!test.testProgram()) {
+            System.out.println("Test error");
+            System.exit(1);
+        } else {
+            System.out.println("All tests completed");
+        }
+
         System.out.println(" ");
 
         double x = readNum("Input X: ");
@@ -21,9 +25,12 @@ public class Main {
 
     }
 
+    private static final Picture picture = new Picture();
+    private static final Test test = new Test();
+
     public static void printColorForPoint(double x, double y) {
         System.out.printf("(%.2f, %.2f) -> ", x, y);
-        System.out.println(getColor(x, y));
+        System.out.println(picture.getColor(x, y));
     }
 
     private static double readNum(String text) {

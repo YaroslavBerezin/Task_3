@@ -1,33 +1,43 @@
 package ru.vsu.sc.berezin_y_a;
 
-import static ru.vsu.sc.berezin_y_a.Picture.getColor;
-import static ru.vsu.sc.berezin_y_a.Main.printColorForPoint;
-
 public class Test {
 
-    public static void mainTest() {
-        System.out.println("Tests: ");
-
-        System.out.println(test(4, 3, SimpleColor.YELLOW));
-        System.out.println(test(1.2, 2.2, SimpleColor.YELLOW));
-        System.out.println(test(0, 0, SimpleColor.ORANGE));
-        System.out.println(test(0, -3, SimpleColor.GREEN));
-        System.out.println(test(3, -2, SimpleColor.BLUE));
-        System.out.println(test(0, -5, SimpleColor.GRAY));
-        System.out.println(test(-3, 5, SimpleColor.WHITE));
-        System.out.println(test(-3, 0, SimpleColor.GRAY));
-        System.out.println(test(-2, -5, SimpleColor.ORANGE));
-        System.out.println(test(0, 3.3, SimpleColor.GRAY));
-    }
-
-    public static State test(double x, double y, SimpleColor state) {
-        printColorForPoint(x, y);
-        if (getColor(x, y) == state) {
-            return State.OK;
+    public boolean testProgram() {
+        if (picture.getColor(1.2, 2.2) != SimpleColor.YELLOW) {
+            System.out.println("Test 1 is not completed");
+            return false;
+        } else if (picture.getColor(0, 0) != SimpleColor.ORANGE) {
+            System.out.println("Test 2 is not completed");
+            return false;
+        } else if (picture.getColor(0, -3) != SimpleColor.GREEN) {
+            System.out.println("Test 3 is not completed");
+            return false;
+        } else if (picture.getColor(3, -2) != SimpleColor.BLUE) {
+            System.out.println("Test 4 is not completed");
+            return false;
+        } else if (picture.getColor(0, -5) != SimpleColor.GRAY) {
+            System.out.println("Test 5 is not completed");
+            return false;
+        } else if (picture.getColor(-3, 5) != SimpleColor.WHITE) {
+            System.out.println("Test 6 is not completed");
+            return false;
+        } else if (picture.getColor(-3, 0) != SimpleColor.GRAY) {
+            System.out.println("Test 7 is not completed");
+            return false;
+        } else if (picture.getColor(-2, -5) != SimpleColor.ORANGE) {
+            System.out.println("Test 8 is not completed");
+            return false;
+        } else if (picture.getColor(0, 3.3) != SimpleColor.GRAY) {
+            System.out.println("Test 9 is not completed");
+            return false;
+        } else if (picture.getColor(4, 3) != SimpleColor.YELLOW) {
+            System.out.println("Test 10 is not completed");
+            return false;
         } else {
-            return State.ERROR;
+            return true;
         }
-
     }
+
+    private static final Picture picture = new Picture();
 
 }
